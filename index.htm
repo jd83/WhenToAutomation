@@ -1,0 +1,544 @@
+<!--
+    Powered By nodePPT - This is probably the best web presentation tool so far!
+    version: 1.4.2
+    site: https://github.com/ksky521/nodePPT
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>什么时候考虑自动化 - By Jane.J.Dai</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    
+<link rel="stylesheet" href="./css/theme.dark.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>什么时候考虑自动化</h1>
+<h2>分享者：Jane.J.Dai</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>目录</h1>
+<ul>
+<li>问题</li>
+<li>自动化测试与手工测试对比</li>
+<li>不要低估自动化成本</li>
+<li>为什么要思考是否自动化</li>
+<li>怎么考虑自动化</li>
+<li>什么时候考虑自动化</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>开篇：问题</h1>
+<ul>
+<li>大家对自动化使用有什么感受？</li>
+<li>自动化是否是一次性投入项目？</li>
+<li>你知道你的自动化测试用例占比吗？</li>
+<li>我们的目标是全部自动化吗？</li>
+<li>什么为自动化带来价值？</li>
+<li>自动化发现的大都是什么样的问题？</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>第一回：自动化测试与手工测试对比</h1>
+<ol>
+<li>成本上，自动化成本一般高于手工</li>
+<li>技术上，自动化对技术要求更高</li>
+<li>优势上，各有优劣</li>
+</ol>
+<ul class="bounceIn">
+<li>人工测试擅长发现一些图形上的问题。</li>
+<li>自动化测试擅长大量的精确对比。</li>
+<li>人工对回归测试存在微调，更容易发现问题，但自动化回归执行更快。</li>
+<li>自动化测试会比手工测试更早发现问题。</li>
+<li>自动化测试对发现的问题更容易重现。</li>
+<li>大部分测试手工也可以，自动化也可以。但对于如压力测试，自动化测试具有天然优势。而对于比如易用性也只有手工测试。</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>第二回：不要低估自动化成本</h1>
+<ul>
+<li>成本上，需要有稳定的技术支持</li>
+<li>质量上，可能因为自动化从好设计实现角度弱化了测试，而遗漏一些问题</li>
+<li>人员上，需要技术性更强的人才</li>
+<li>时间上，<ul>
+<li>自动化框架搭建及维护</li>
+<li>自动化用例的设计，编写</li>
+<li>自动化脚本的编写及调试</li>
+<li>自动化测试报告阅读分析</li>
+<li>自动化测试发现的问题，分析究竟是误报还是问题</li>
+<li>自动化测试用例被破坏，分析是修复还是废弃重写，或者改为手工</li>
+<li>自动化测试用例的修复</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>第三回：为什么要思考是否自动化？</h1>
+<ol>
+<li>测试时间的有限性</li>
+<li>质量保证的需求</li>
+<li>自动化需要稳定技术支持</li>
+<li>测试类型</li>
+</ol>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>目录</h1>
+<ul>
+<li>问题</li>
+<li>自动化测试与手工测试对比</li>
+<li>不要低估自动化成本</li>
+<li>为什么要思考是否自动化</li>
+<li><a href="index.md#7" target="_blank">怎么考虑自动化</a></li>
+<li>什么时候考虑自动化</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="zoomout"><article class="flexbox vcenter">
+<div class="magic-wrapper">
+<article class="flexbox vcenter">
+<h1>第四回：怎么考虑自动化</h1>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>前提</h2>
+<ul>
+<li>不能因为自动化实现问题而弱化测试</li>
+<li>先设计测试用例，再考虑是否自动化</li>
+<li>回归测试，版本验证测试等受下面因素影响较小</li>
+</ul>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem far-next pagedown"  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>自动化测试的生命周期</h2>
+<ul>
+<li>创建自动化测试-&gt;运行自动化测试-&gt;代码变化-&gt;运行自动化测试-&gt;成功？继续：修复代价高于废弃重写？生命结束：修复</li>
+</ul>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>待测代码划分</h2>
+<ul>
+<li>中间代码和功能代码</li>
+<li>我们的测试是针对功能代码</li>
+<li>自动化测试设计时，要避免中间代码的影响</li>
+<li>自动化测试设计时，要尽量多覆盖中间代码线路</li>
+</ul>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>举个例子</h2>
+<img src="./crp.png" alt="Customer Return Process">
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>中间代码</h2>
+<div style="width:1024px;height:720px;overflow:scroll">
+<pre><code>
+// 
+// txtRMANumber
+// 
+this.txtRMANumber.Dock = System.Windows.Forms.DockStyle.Top;
+this.txtRMANumber.Location = new System.Drawing.Point(91, 3);
+this.txtRMANumber.Name = "txtRMANumber";
+this.txtRMANumber.Size = new System.Drawing.Size(138, 21);
+this.txtRMANumber.TabIndex = 0;
+this.txtRMANumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtRMANumber_MouseClick);
+this.txtRMANumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRMANumber_KeyDown);
+this.txtRMANumber.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtRMANumber_MouseDown);
+
+private void txtRMANumber_KeyDown(object sender, KeyEventArgs e)
+{
+
+    if (e.KeyCode == Keys.Enter)
+    {
+        LoadRMA();
+    }
+}
+
+private void LoadRMA()
+{
+    try
+    {
+        this.Cursor = Cursors.WaitCursor;
+        string uniqueRMANumber = LoadRMAByRMANumberOrControlNumber(txtRMANumber.Text.Trim());
+        if (uniqueRMANumber == string.Empty)
+        {
+            this.txtRMANumber.Text = string.Empty;
+            return;
+        }
+        this.LoadRMAByUniqueRMANumber(uniqueRMANumber,true);
+    }
+    finally
+    {
+        this.Cursor = Cursors.Default;
+    }
+}
+
+public static string LoadRMAByRMANumberOrControlNumber(string rmaNumberOrControlCode)
+{
+
+    if (string.IsNullOrEmpty(rmaNumberOrControlCode))
+    {
+        return string.Empty;
+    }
+
+    string uniqueRMANumber = string.Empty;
+    string errorMsg;
+
+    if (ControlCodeManager.VerifyScanControlCode(rmaNumberOrControlCode, out errorMsg))
+    {
+        uniqueRMANumber = GetUniqueRMANumberByControlNumber(rmaNumberOrControlCode);
+    }
+    else
+    {
+        bool cancel = false;
+        uniqueRMANumber = FrmChooseRMA.GetUniqueRMANumber(rmaNumberOrControlCode, out cancel);
+    }
+    if(uniqueRMANumber.IsNullOrEmptyEx())
+    {
+        uniqueRMANumber = GetUniqueNumberByReferenceRMANumber(rmaNumberOrControlCode);
+    }
+
+    if (uniqueRMANumber.IsNullOrEmptyEx())
+    {
+        FormControlToolkit.PopUpPromptInfo("Cannot find any RMA by #[{0}]",rmaNumberOrControlCode);
+    }
+
+    return uniqueRMANumber;
+}
+</code></pre>
+</div>
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>功能代码</h2>
+<div style="width:1024px;height:720px;overflow:scroll">
+<pre><code>
+private void LoadRMAByUniqueRMANumber(string uniqueRMANumber,bool isInputRMA=false)
+{
+    try
+    {
+
+        this.Cursor = Cursors.WaitCursor;
+        Clear();
+        List<RMATrackingNumberTransactionEntity> trackingList;
+        List<ControlCodeEntity> controlCodeList;
+        List<SerialNumberEntity> soSNList;
+        OzzoLocalRequestEntity request;
+        RMAMasterEntity rmaMaster = RMAManager.GetRMAAllInformation(uniqueRMANumber, out  request, out controlCodeList, out soSNList, out trackingList);
+        // 输入的RMA#不存在
+        if (rmaMaster == null)
+        {
+            FormControlToolkit.PopUpPromptInfo(ml.ml_string(2319, "Sorry, can't find the RMA # [") + uniqueRMANumber + "].");
+            FormControlToolkit.SetHighLight(this.txtRMANumber);
+            return;
+        }
+        if (isInputRMA)
+        {
+            var warningMsg =  RMAManager.GetWarningMsgWhenInputRMA(uniqueRMANumber);
+            if (!warningMsg.IsNullOrEmptyEx())
+            {
+                FormControlToolkit.PopUpPromptInfo(warningMsg);
+            }
+        }
+
+        // 不为空则表示存在状态为Open的Request
+        if (request != null)
+        {
+            string msg = ml.ml_string(2318, "Sorry, you can't process this RMA # [") + uniqueRMANumber + ml.ml_string(2317, "] right now.");
+            FrmRMARequestPop frmRMARequestPop = new FrmRMARequestPop(request, uniqueRMANumber, msg);
+            frmRMARequestPop.ShowDialog();
+
+            FormControlToolkit.SetHighLight(this.txtRMANumber);
+
+            //只有Pass TO Inspection 允许显示数据
+            if (request.RequestType.Value != RequestType.GetNumber(RequestType.Enum.InspectionRequest))
+            {
+                return;
+            }
+
+            //return;
+        }
+        //Added by Jason Jiang for CRL14246
+        this.PassToInspection = (request != null && request.RequestType.Value == RequestType.GetNumber(RequestType.Enum.InspectionRequest));
+
+        //Added by Cotter 2009/4/22
+        //------------------------------
+        //弹出提示框让用户删除多余的C#。
+        if (RMAManager.IsRMANeedVoidControlCode(rmaMaster, controlCodeList))
+        {
+            FrmVoidControlCodeCRP frmVoidControlCode = new FrmVoidControlCodeCRP();
+            frmVoidControlCode.UniqueRMANumber = uniqueRMANumber;
+            //add by jakie for crl18439
+            if (frmVoidControlCode.VoidControlCodeList != null && frmVoidControlCode.VoidControlCodeList.Count > 0)
+            {
+                foreach (FrmVoidControlCodeCRP.ControlCodeWrapper entity in frmVoidControlCode.VoidControlCodeList)
+                {
+                    if (!StringHelper.IsNullOrEmpty(entity.ControlCode))
+                    {
+                        string errorMsg = string.Empty;
+                        if (!ControlCodeManager.ValidateControlCodeIsHoldAndRecordLastUserName(entity.ControlCode,
+                            ApplicationInfo.UserID, ApplicationInfo.UserName, out errorMsg))
+                        {
+                            FormControlToolkit.PopUpPromptInfo(errorMsg);
+                            return;
+                        }
+                    }
+                }
+            }
+            if (frmVoidControlCode.NeedVoidControlCode)
+            {
+                if (frmVoidControlCode.ShowDialog(this) == DialogResult.OK)
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    List<ControlCodeEntity> ibControlCodeList = 
+                        ControlCodeManager.GetControlCodeListByIB(uniqueRMANumber, rmaMaster.RMANumber);
+                    if (ibControlCodeList.IsNullOrEmpty())
+                    {
+                        controlCodeList = new List<ControlCodeEntity>();
+                    }
+                    else
+                    {
+                        var notExistsControlCodeList = controlCodeList.FindAll(c => !ibControlCodeList.Exists(c1 => c.ControlCode.AreEqualsTo(c1.ControlCode)));
+                        if (!notExistsControlCodeList.IsNullOrEmpty())
+                        {
+                            foreach (var deletecontrol in notExistsControlCodeList)
+                            {
+                                controlCodeList.Remove(deletecontrol);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    FormControlToolkit.SetHighLight(this.txtRMANumber);
+                    return;
+                }
+            }
+        }
+        //------------------------------
+
+        m_TrackingNumberList = trackingList;
+        LoadSNCollection(soSNList);
+        ControlCodeEntityList = controlCodeList;
+        this.RMAMasterEntity = rmaMaster;
+        this.SetControlFocusAfterLoadRMA();
+    }
+    finally
+    {
+        this.Cursor = Cursors.Default;
+    }
+}    
+</code></pre>
+</div>
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>待测代码的改变</h2>
+<ul>
+<li>代码不变，自动化测试要不第一次就发现问题，要不一直不能发现</li>
+<li>代码变化，就可能出问题，就可能为自动化测试带来价值</li>
+<li>功能代码的改变，常常带来的是自动化测试生命终结</li>
+<li>中间代码改动，是为自动化测试带来价值的主要来源</li>
+</ul>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>多与他人交流</h2>
+<ul>
+<li>咨询开发人员，中间代码改动的可能性</li>
+<li>咨询PM，这个项目是否非常重要，面临激烈的市场竞争。改动频繁会提高自动化成本，缩短生命</li>
+<li>咨询自动化专家，应对产品变化的记录中，哪些变化容易导致自动化测试生命结束</li>
+</ul>
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>目录</h1>
+<ul>
+<li>问题</li>
+<li>自动化测试与手工测试对比</li>
+<li>不要低估自动化成本</li>
+<li>为什么要思考是否自动化</li>
+<li>怎么考虑自动化</li>
+<li><a href="index.md#9" target="_blank">什么时候考虑自动化</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="zoomout"><article class="flexbox vcenter">
+<div class="magic-wrapper">
+<article class="flexbox vcenter">
+<h1>第五回：什么时候考虑自动化</h1>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>是否自动化要思考的几个问题</h2>
+<ol>
+<li>如果自动化，可以减少多少手工测试？可能存在多大的质量风险？</li>
+<li>待测功能代码是否稳定？</li>
+<li>是否能避免中间代码对自动化测试的影响？</li>
+</ol>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem far-next pagedown"  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>什么时候考虑自动化</h2>
+<ol>
+<li>自动化测试生命周期长</li>
+<li>代码改动较小影响自动化测试</li>
+<li>出现过Bug的地方，在未来有改动的可能性比较大</li>
+<li>以前改动过的代码，在未来有改动的可能性比较大</li>
+<li>自动化测试更具优势的测试，比如性能测试</li>
+</ol>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>什么时候不要自动化</h2>
+<ol>
+<li>如果自动化时间不足会影响正常发布</li>
+<li>如果自动化会带来较大质量风险</li>
+<li>如果自动化就使用一两次</li>
+<li>如果自动化成本高而生命周期短</li>
+</ol>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="zoomout"><article>
+<div class="magic-wrapper">
+<article>
+<h2>再来个例子</h2>
+<img src="./example.jpg" alt="eg.">
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>最终回：Q&amp;A</h1>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodePPT v1.4.2</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'newspaper',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!--placeholder-->
+</body>
+</html>
