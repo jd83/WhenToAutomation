@@ -46,6 +46,7 @@
 <li>我们的目标是全部自动化吗？</li>
 <li>什么为自动化带来价值？</li>
 <li>自动化发现的大都是什么样的问题？</li>
+<li>什么时候考虑自动化？</li>
 </ul>
 
 </article></section></slide>
@@ -69,9 +70,9 @@
 <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
 <h1>第二回：不要低估自动化成本</h1>
 <ul>
-<li>成本上，需要有稳定的技术支持</li>
-<li>质量上，可能因为自动化从好设计实现角度弱化了测试，而遗漏一些问题</li>
+<li>技术上，需要有稳定的技术支持</li>
 <li>人员上，需要技术性更强的人才</li>
+<li>质量上，可能因为自动化从好设计实现角度弱化了测试，而遗漏一些问题</li>
 <li>时间上，<ul>
 <li>自动化框架搭建及维护</li>
 <li>自动化用例的设计，编写</li>
@@ -122,7 +123,6 @@
 <ul>
 <li>不能因为自动化实现问题而弱化测试</li>
 <li>先设计测试用例，再考虑是否自动化</li>
-<li>回归测试，版本验证测试等受下面因素影响较小</li>
 </ul>
 
 </article>
@@ -131,9 +131,19 @@
 <div class="magicItem far-next pagedown"  data-transition="zoomout"><article>
 <div class="magic-wrapper">
 <article>
-<h2>自动化测试的生命周期</h2>
+<h2>回报投入比</h2>
 <ul>
+<li>自动化的收益 = 迭代次数 * 全手动执行成本 - 首次自动化成本 - 维护次数 * 维护成本</li>
+<li>自动化测试的生命周期<ul>
 <li>创建自动化测试-&gt;运行自动化测试-&gt;代码变化-&gt;运行自动化测试-&gt;成功？继续：修复代价高于废弃重写？生命结束：修复</li>
+</ul>
+</li>
+<li>待测代码的改变<ul>
+<li>代码不变，自动化测试要不第一次就发现问题，要不一直不能发现</li>
+<li>代码变化，就可能出问题，就可能为自动化测试带来价值</li>
+<li>代码变化，也可能为自动化测试带来生命终结</li>
+</ul>
+</li>
 </ul>
 
 </article>
@@ -145,9 +155,6 @@
 <h2>待测代码划分</h2>
 <ul>
 <li>中间代码和功能代码</li>
-<li>我们的测试是针对功能代码</li>
-<li>自动化测试设计时，要避免中间代码的影响</li>
-<li>自动化测试设计时，要尽量多覆盖中间代码线路</li>
 </ul>
 
 </article>
@@ -374,25 +381,25 @@ private void LoadRMAByUniqueRMANumber(string uniqueRMANumber,bool isInputRMA=fal
 <div class="magicItem "  data-transition="zoomout"><article>
 <div class="magic-wrapper">
 <article>
-<h2>待测代码的改变</h2>
+<h2>怎么思考自动化</h2>
 <ul>
-<li>代码不变，自动化测试要不第一次就发现问题，要不一直不能发现</li>
-<li>代码变化，就可能出问题，就可能为自动化测试带来价值</li>
-<li>功能代码的改变，常常带来的是自动化测试生命终结</li>
-<li>中间代码改动，是为自动化测试带来价值的主要来源</li>
+<li>根据<ul>
+<li>中间代码改变，为自动化带来价值</li>
+<li>功能代码改变，可能结束自动化生命</li>
 </ul>
-
-</article>
-</div>
-</article></div>
-<div class="magicItem "  data-transition="zoomout"><article>
-<div class="magic-wrapper">
-<article>
-<h2>多与他人交流</h2>
-<ul>
+</li>
+<li>那么<ul>
+<li>避免中间代码改变对自动化测试的影响（让它活久点，测试是针对功能代码，不能避免受它改变影响）。</li>
+<li>尽量多覆盖中间代码线路（让它活得更有价值）。</li>
+<li>功能代码频繁改变不要自动化（注定短命的不要做）。</li>
+</ul>
+</li>
+<li>多与他人交流<ul>
 <li>咨询开发人员，中间代码改动的可能性</li>
 <li>咨询PM，这个项目是否非常重要，面临激烈的市场竞争。改动频繁会提高自动化成本，缩短生命</li>
 <li>咨询自动化专家，应对产品变化的记录中，哪些变化容易导致自动化测试生命结束</li>
+</ul>
+</li>
 </ul>
 
 </article>
@@ -436,11 +443,12 @@ private void LoadRMAByUniqueRMANumber(string uniqueRMANumber,bool isInputRMA=fal
 <article>
 <h2>什么时候考虑自动化</h2>
 <ol>
-<li>自动化测试生命周期长</li>
-<li>代码改动较小影响自动化测试</li>
+<li>项目周期长</li>
+<li>相对稳定，代码改动较小影响自动化测试</li>
 <li>出现过Bug的地方，在未来有改动的可能性比较大</li>
 <li>以前改动过的代码，在未来有改动的可能性比较大</li>
 <li>自动化测试更具优势的测试，比如性能测试</li>
+<li>回归测试，版本验证测试等不太受上面因素影响</li>
 </ol>
 
 </article>
@@ -464,13 +472,21 @@ private void LoadRMAByUniqueRMANumber(string uniqueRMANumber,bool isInputRMA=fal
 <div class="magic-wrapper">
 <article>
 <h2>再来个例子</h2>
-<img src="./example.jpg" alt="eg.">
-
+<iframe data-src="http://sctrtest:8080/job/LocalRMA_Service_AntAutomationTest/158/Jmeter_Report" src="about:blank;"></iframe>
 </article>
 </div>
 </article></div></div></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
 <h1>最终回：Q&amp;A</h1>
+<ul>
+<li>大家对自动化使用有什么感受？</li>
+<li>自动化是否是一次性投入项目？</li>
+<li>你知道你的自动化测试用例占比吗？</li>
+<li>我们的目标是全部自动化吗？</li>
+<li>什么为自动化带来价值？</li>
+<li>自动化发现的大都是什么样的问题？</li>
+<li>什么时候考虑自动化？</li>
+</ul>
 
 </article></section></slide>
         
